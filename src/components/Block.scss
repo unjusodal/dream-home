@@ -1,0 +1,98 @@
+.apartaments__blocks {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.blocks__block {
+    width: 100%;
+    background-color: #2C2B2B;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 300ms ease;
+
+    &:hover {
+        transform: scale(101%);
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.block__price-bar {
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+    h2 {
+        font-weight: 500;
+    }
+
+    button {
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+}
+
+.block__rooms {
+    padding: 10px 20px;
+    color: rgb(192, 192, 192);
+    font-size: 0.8rem;
+
+    table {
+        width: 100%;
+        border: 0.1rem solid rgb(192, 192, 192);
+        border-radius: 5px;
+        border-spacing: 0;
+
+        td {
+            width: 33%;
+            text-align: center;
+            padding: 3px;
+        }
+
+        td:nth-child(even) {
+            border-left: 0.1rem solid rgb(192, 192, 192);
+            border-right: 0.1rem solid rgb(192, 192, 192);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    .block__price-bar {
+        font-size: 0.85rem;
+    }
+
+    .block__rooms {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 798px) {
+    .apartaments__blocks {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .block__price-bar {
+        font-size: 0.6rem;
+
+        button {
+            font-size: 0.7rem;
+            padding: 10px;
+        }
+    }
+
+    .block__rooms {
+        font-size: 0.5rem;
+    }
+}
